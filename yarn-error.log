@@ -1,0 +1,68 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn
+
+PATH: 
+  /home/sean/.bun/bin:/home/sean/.bun/bin:/home/sean/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/sean/.yarn/bin:/home/sean/.config/scripts/:/opt/gradle/bin:/home/sean/.cargo/bin:/home/sean/.config/scripts/:/opt/gradle/bin:/home/sean/.cargo/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  19.4.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@wasm-tool%2frollup-plugin-rust: SSL Error: UNABLE_TO_GET_ISSUER_CERT_LOCALLY
+      at module.exports.Request.onRequestResponse (/usr/lib/node_modules/yarn/lib/cli.js:141653:24)
+      at ClientRequest.emit (node:events:513:28)
+      at HTTPParser.parserOnIncomingClient [as onIncoming] (node:_http_client:688:27)
+      at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+      at TLSSocket.socketOnData (node:_http_client:530:22)
+      at TLSSocket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:324:12)
+      at readableAddChunk (node:internal/streams/readable:297:9)
+      at Readable.push (node:internal/streams/readable:234:10)
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+
+npm manifest: 
+  {
+    "name": "svelte-app",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "build": "rollup -c",
+      "dev": "rollup -c -w",
+      "start": "sirv public --no-clear",
+      "check": "svelte-check --tsconfig ./tsconfig.json"
+    },
+    "devDependencies": {
+      "@rollup/plugin-commonjs": "^17.0.0",
+      "@rollup/plugin-node-resolve": "^11.0.0",
+      "@rollup/plugin-typescript": "^8.0.0",
+      "@tsconfig/svelte": "^2.0.0",
+      "rollup": "^2.3.4",
+      "rollup-plugin-css-only": "^3.1.0",
+      "rollup-plugin-livereload": "^2.0.0",
+      "rollup-plugin-svelte": "^7.0.0",
+      "rollup-plugin-terser": "^7.0.0",
+      "svelte": "^3.0.0",
+      "svelte-check": "^2.0.0",
+      "svelte-preprocess": "^4.0.0",
+      "svelthree": "^0.119.0-5",
+      "tslib": "^2.0.0",
+      "typescript": "^4.0.0"
+    },
+    "dependencies": {
+      "@wasm-tool/rollup-plugin-rust": "^2.3.3",
+      "sirv-cli": "^2.0.0",
+      "three": "^0.110.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
